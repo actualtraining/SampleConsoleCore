@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SampleCSharp1
 {
@@ -7,15 +8,10 @@ namespace SampleCSharp1
         static void Main(string[] args)
         {
             int bil1 = 12;
-            double bil2 = 13.4;
+            int bil2 = bil1;
 
-            bool check = true;
-
-            //narrowing conversion
-            //int bil3 = Convert.ToInt32(bil2);
-            int bil3 = (int)bil2;
-
-            double bil4 = bil1;
+            bil2 = bil2 + 5;
+           
 
             //reference type
             Mahasiswa mhs1 = new Mahasiswa();
@@ -23,13 +19,27 @@ namespace SampleCSharp1
             mhs1.Nama = "Erick Kurniawan";
             mhs1.IPK = 3.4;
 
-            /*Console.WriteLine("Nilai : "+bil3.ToString());
-            Console.WriteLine("Nilai Bil4 : " + bil4.ToString());
-            Console.WriteLine("Nilai check : " + check.ToString());*/
+            Mahasiswa mhs2 = mhs1;
+            mhs2.IPK = 3.6;
 
+            Console.WriteLine("Bil 2 : " + bil2.ToString());
+            Console.WriteLine("Bil 1 : " + bil1.ToString());
+            
             //menampilkan reference type
             Console.WriteLine(mhs1.Nim + " - " + mhs1.Nama + " - " 
                 + mhs1.IPK.ToString());
+
+            List<string> arrName = new List<string>();
+            arrName.Add("Erick");
+            arrName.Add("Budi");
+            arrName.Add("Lazuwardi");
+            arrName.Add("Andi");
+
+            foreach(string name in arrName)
+            {
+                Console.WriteLine(name.ToString());
+            }
+
         }
     }
 }
