@@ -76,7 +76,7 @@ namespace SampleCSharp1
             Mahasiswa konversi = mhs3 as Mahasiswa;
             Console.WriteLine(cekobjek);*/
 
-            int nilai = 0;
+            /*int nilai = 0;
 
             Console.Write("Masukan Nilai :");
 
@@ -130,11 +130,87 @@ namespace SampleCSharp1
                 Console.WriteLine(bil);
             }
 
-            /*do
+            do
             {
                 bil++;
                 Console.WriteLine(bil);
             } while (bil < 10);*/
+
+            /*HelperMethod myHelper = new HelperMethod();
+            Console.Write("Masukan Alas :");
+            double alas = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Masukan Tinggi :");
+            double tinggi = Convert.ToDouble(Console.ReadLine());
+
+            int tg2 = 12;
+
+            double hasil = myHelper.HitungLuasSegitiga(alas, tg2);
+            Console.WriteLine("Hasilnya : " + hasil);
+
+            Console.WriteLine("Alas : " + alas.ToString());
+
+            Console.WriteLine(HelperMethod.HitungPersegi(10, 10));*/
+
+
+            Queue<string> queueName = new Queue<string>();
+            queueName.Enqueue("Erick");
+            queueName.Enqueue("Budi");
+            queueName.Enqueue("Bambang");
+            queueName.Enqueue("Joni");
+
+            int jumlah = queueName.Count;
+
+            for(int i=0;i<jumlah;i++)
+            {
+                Console.WriteLine(queueName.Dequeue());
+            }
+
+            Stack<string> stackName = new Stack<string>();
+            stackName.Push("Erick");
+            stackName.Push("Budi");
+            stackName.Push("Bambang");
+            stackName.Push("Joni");
+
+            int jmlStack = stackName.Count;
+            for(int i = 0; i < jmlStack; i++)
+            {
+                Console.WriteLine(stackName.Pop());
+            }
+
+            List<Mahasiswa> lstMhs = new List<Mahasiswa>();
+            Mahasiswa mhs1 = new Mahasiswa
+            {
+                Nim = "88992255",
+                Nama = "Erick Kurniawan",
+                IPK = 3.6
+            };
+            Mahasiswa mhs2 = new Mahasiswa();
+            mhs2.Nim = "88992256";
+            mhs2.Nama = "Budi Sutedjo";
+            mhs2.IPK = 3.4;
+
+            lstMhs.Add(mhs1);
+            lstMhs.Add(mhs2);
+
+            foreach(Mahasiswa mhs in lstMhs)
+            {
+                Console.WriteLine(mhs.Nim + " " + mhs.Nama + " " + mhs.IPK);
+            }
+
+            Dictionary<string, string> myDict = new Dictionary<string, string>();
+            myDict.Add("YY", "Yogyakarta");
+            myDict.Add("JJ", "Jakarta");
+            myDict.Add("BB", "Bandung");
+
+            Console.WriteLine(myDict["YY"]);
+
+            foreach(KeyValuePair<string,string> dict in myDict)
+            {
+                Console.WriteLine("Key :" + dict.Key + " - Value:" + dict.Value);
+            }
+
+            Dosen dsn = new Dosen();
+            Console.WriteLine(dsn.Nama + " " + dsn.Alamat + " " + dsn.Email);
         }
     }
 }
