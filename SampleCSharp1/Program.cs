@@ -34,10 +34,21 @@ namespace SampleCSharp1
             arrName.Add("Budi");
             arrName.Add("Lazuwardi");
             arrName.Add("Andi");
+            arrName.Add("Joni");
 
             foreach(string name in arrName)
             {
                 Console.WriteLine(name.ToString());
+            }
+
+            string[] arrMatkul = new string[3];
+            arrMatkul[0] = "Algoritma dan Pemrograman";
+            arrMatkul[1] = "Web Development";
+            arrMatkul[2] = "Mobile Development";
+            
+            for(int i=0;i<3;i++)
+            {
+                Console.WriteLine(arrMatkul[i]);
             }
 
         }
